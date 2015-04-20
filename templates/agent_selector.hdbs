@@ -1,0 +1,4 @@
+<label for=agentId>Reassign {{user.name}}'s articles to agent ID:</label>
+<input id="agentId" name="agentId" autofocus>
+
+<button type="button" class="btn btn-default btn-lg" id="reassign">Reassign Articles</button>
