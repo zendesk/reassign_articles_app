@@ -1,3 +1,3 @@
 <span style="color:{{#if success}}green{{else}}red{{/if}}">{{message}}</span>
 <br />
-<button type="button" class="btn btn-default btn-lg" id="retry">Reassign Again</button>
+<button type="button" class="btn btn-default btn-lg" id="retry">{{t 'reassign.again_button_text'}}</button>

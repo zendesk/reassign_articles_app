@@ -1,54 +1,31 @@
 {
   "app": {
-    "package": "app_name",
+    "package": "reassign_all_articles",
     "description": {
-      "value": "Play the famous zen tunes in your help desk.",
+      "value": "Reassign all articles belonging to one user to another.",
       "title": "app description"
     },
     "name": {
-      "value": "Buddha Machine",
+      "value": "Reassign Articles",
       "title": "app name"
     }
   },
 
-  "loading": {
-    "value": "Welcome to this Sample App",
-    "title": "loading placeholder"
+
+  "reassign": {
+    "prompt": "Reassign {{user.name}}'s articles to agent ID:",
+    "button_text": "Reassign Articles",
+    "again_button_text": "Reassign Again"
   },
 
-  "fetch": {
-    "done": {
-      "value": "Good",
-      "title": "fetch success"
+  "messages": {
+    "errors": {
+      "get_fail": "Failed to retrieve list of articles!",
+      "no_articles": "{{name}} has no articles to reassign!",
+      "new_author_is_end_user": "Cannot reassign articles to {{name}}! {{name}} is an end-user."
     },
-    "fail": {
-      "value": "failed to fecth information from the server",
-      "title": "fetch failure"
-    }
-  },
 
-  "id": {
-    "value": "ID",
-    "title": "user id"
-  },
-
-  "email": {
-    "value": "Email",
-    "title": "user email"
-  },
-
-  "name": {
-    "value": "Name",
-    "title": "user name"
-  },
-
-  "role": {
-    "value": "Role",
-    "title": "user role"
-  },
-
-  "groups": {
-    "value": "Groups",
-    "title": "user groups"
+    "success": "{{numArticles}} articles reassigned successfully!",
+    "fail": "Unable to reassign articles!"
   }
 }

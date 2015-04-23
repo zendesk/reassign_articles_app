@@ -50,7 +50,7 @@
     },
 
     onGetFail: function() {
-      this.displayMessage(false, 'Failed to retrieve list of articles!');
+      this.displayMessage(false, this.I18n.t('messages.errors.get_fail'));
     },
 
     verifyAuthorRole: function(data) {
@@ -58,8 +58,8 @@
       var currentAuthorId = this.user().id();
 
       if (newAuthor.role === "end-user" || !newAuthor) {
-        this.displayMessage(false, 'Cannot reassign articles to ' + newAuthor.name + '! ' +
-         newAuthor.name + ' is an end-user.');
+        var message = this.I18n.t('messages.errors.new_author_is_end_user', { name: newAuthor.name });
+        this.displayMessage(false, message);
       } else {
         this.ajax('getArticles', currentAuthorId);
       }
@@ -71,14 +71,15 @@
       var currentUser = this.user();
 
       if (articles.length < 1) {
-        this.displayMessage(false, currentUser.name() + ' has no articles to reassign!');
+        var message = this.I18n.t('no_articles', { name: currentUser.name() });
+        this.displayMessage(false, message);
       }
       else {
         for (var i = 0; i < articles.length; i++) {
           requests.push(
             this.ajax('updateArticleAuthor', articles[i].id, this.newAuthorId)
           );
-        } 
+        }
         this.updateArticleRecords(requests);
       }
     },
@@ -89,20 +90,22 @@
         apply(this, requests).
         done(
           _.bind(function(){
-            this.displayMessage(true, requests.length + ' articles reassigned successfully!');
+            var message = this.I18n.t('messages.success', { numArticles: requests.length });
+            this.displayMessage(true, message);
         }, this)).
         fail(
           _.bind(function(){
-            this.displayMessage(false, 'Unable to reassign articles!');
+            var message = this.I18n.t('messages.fail');
+            this.displayMessage(false, message);
         }, this));
     },
 
     displayMessage: function(success, message) {
       this.switchTo(
         'error',
-        { 
-          success: success, 
-          message: message 
+        {
+          success: success,
+          message: message
         }
       );
     }
