@@ -7,11 +7,11 @@ packages:
 parts:
   - translation:
       key: "txt.apps.reassign_all_articles.app.description"
-      title: "app description"
-      value: "Reassign all articles belonging to one user to another."
+      title: "app description for the Reassign Articles app"
+      value: "Reassign all of an agent's articles to another agent."
   - translation:
       key: "txt.apps.reassign_all_articles.app.name"
-      title: "app name"
+      title: "app name. It can be localized, this app allows to reassign authorship of articles from one agent to another one"
       value: "Reassign Articles"
   - translation:
       key: "txt.apps.reassign_all_articles.reassign.prompt"
@@ -20,28 +20,28 @@ parts:
   - translation:
       key: "txt.apps.reassign_all_articles.reassign.button_text"
       title: "Button to perform reassign action."
-      value: "Reassign Articles"
+      value: "Reassign articles"
   - translation:
       key: "txt.apps.reassign_all_articles.reassign.again_button_text"
-      title: "Button displayed when action fails. Prompt user to try again."
-      value: "Reassign Again"
+      title: "Button displayed when action fails. Prompt user to try again. Reassign articles again."
+      value: "Reassign again"
   - translation:
       key: "txt.apps.reassign_all_articles.messages.errors.get_fail"
       title: "Error message.  App failed to retrieve articles to reassign."
-      value: "Failed to retrieve list of articles!"
+      value: "Failed to retrieve list of articles."
   - translation:
       key: "txt.apps.reassign_all_articles.messages.errors.no_articles"
       title: "Error message. Current user has no articles to reassign."
-      value: "{{name}} has no articles to reassign!"
+      value: "{{name}} has no articles to reassign."
   - translation:
       key: "txt.apps.reassign_all_articles.messages.errors.new_author_is_end_user"
       title: "Error messsage. The desired new user is an end-user."
-      value: "Cannot reassign articles to {{name}}! {{name}} is an end-user."
+      value: "Cannot reassign articles to {{name}}. {{name}} is an end-user."
   - translation:
       key: "txt.apps.reassign_all_articles.messages.success"
       title: "Articles reassigned successfully."
-      value: "{{numArticles}} articles reassigned successfully!"
+      value: "{{numArticles}} articles reassigned successfully."
   - translation:
       key: "txt.apps.reassign_all_articles.messages.fail"
       title: "General error. Unable to reassign articles!"
-      value: "Unable to reassign articles!"
+      value: "Unable to reassign articles."
